@@ -2,23 +2,74 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    padding: 2px 8px 12px;
     background: #ffb300;
     color: #172b45;
     font-family: Arial, sans-serif;
 }
 
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #172b45;
+    box-shadow: 0 4px 12px rgba(15, 39, 71, 0.18);
+}
+
+.navbar {
+    width: min(900px, 100%);
+    min-height: 64px;
+    margin: 0 auto;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.brand {
+    color: #eeff00;
+    font-size: 22px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    color: #eeff00;
+}
+
+main {
+    padding: 12px 8px;
+}
+
 .profile-card {
     width: min(700px, 100%);
-    min-height: calc(100vh - 14px);
-    margin: 0 auto;
+    margin: 0 auto 20px;
     padding: 36px 34px 40px;
     background: #eeff00;
     border-radius: 18px;
     box-shadow: 0 8px 24px rgba(15, 39, 71, 0.12);
     line-height: 1.8;
+    scroll-margin-top: 76px;
 }
 
 .profile-image {
@@ -40,7 +91,7 @@ h1 {
     text-align: center;
 }
 
-.profile-card > p {
+.profile-details p {
     margin: 12px 0;
     font-size: 20px;
 }
@@ -85,13 +136,82 @@ button:focus-visible {
     outline-offset: 3px;
 }
 
+.content-section {
+    width: min(700px, 100%);
+    margin: 20px auto;
+    padding: 30px 34px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(15, 39, 71, 0.12);
+    scroll-margin-top: 76px;
+}
+
+.content-section h2 {
+    margin-top: 0;
+    color: #172b45;
+    font-size: 30px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-list span {
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #2862ef;
+    color: #fff;
+    font-weight: 700;
+}
+
+.portfolio-item {
+    padding: 18px 20px;
+    border-left: 5px solid #ef28ce;
+    border-radius: 10px;
+    background: #eaf1ff;
+}
+
+.portfolio-item h3,
+.portfolio-item p {
+    margin: 0;
+}
+
+.site-footer {
+    margin-top: 12px;
+    padding: 24px 16px;
+    background: #172b45;
+    color: #fff;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 4px 0;
+}
+
 @media (max-width: 480px) {
     body {
-        padding: 8px;
+        padding: 0;
+    }
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .nav-menu {
+        gap: 12px;
+    }
+
+    .nav-link {
+        font-size: 15px;
     }
 
     .profile-card {
-        min-height: calc(100vh - 16px);
         padding: 28px 22px;
     }
 
@@ -104,8 +224,12 @@ button:focus-visible {
         font-size: 34px;
     }
 
-    .profile-card > p,
+    .profile-details p,
     .motto p {
         font-size: 18px;
+    }
+
+    .content-section {
+        padding: 26px 22px;
     }
 }

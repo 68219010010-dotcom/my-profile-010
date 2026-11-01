@@ -8,25 +8,62 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <main class="profile-card">
-        <img
-            src="68219010010.jpg"
-            alt="รูปโปรไฟล์"
-            class="profile-image"
-        >
+    <header class="site-header">
+        <nav class="navbar" aria-label="เมนูหลัก">
+            <a href="#about" class="brand">My Profile</a>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">เกี่ยวกับฉัน</a>
+                <a href="#skills" class="nav-link">ทักษะ</a>
+                <a href="#portfolio" class="nav-link">ผลงาน</a>
+            </div>
+        </nav>
+    </header>
 
-        <h1>My Profile</h1>
-        <p>ชื่อ-นามสกุล: <span id="fullname">ธนศักดิ์ อินทุย</span></p>
-        <p>ชื่อเล่น: <span id="nickname">ปาย</span></p>
-        <p>รหัสประจำตัว: <span id="studentID">68219010010</span></p>
+    <main>
+        <section class="profile-card" id="about">
+            <img
+                src="68219010010.jpg"
+                alt="รูปโปรไฟล์ของธนศักดิ์ อินทุย"
+                class="profile-image"
+            >
 
-        <section class="motto">
-            <h2>คติประจำใจ</h2>
-            <p id="motto">มองผมโบ๋มุมโก๋ผมก็มี</p>
+            <h1>My Profile</h1>
+            <div class="profile-details">
+                <p>ชื่อ-นามสกุล: <span id="fullname">ธนศักดิ์ อินทุย</span></p>
+                <p>ชื่อเล่น: <span id="nickname">ปาย</span></p>
+                <p>รหัสประจำตัว: <span id="studentID">68219010010</span></p>
+            </div>
+
+            <section class="motto">
+                <h2>คติประจำใจ</h2>
+                <p id="motto">มองผมโบ๋มุมโก๋ผมก็มี</p>
+            </section>
+
+            <button id="greetingBtn" type="button">ทักทาย</button>
+            <p id="greetingMessage" aria-live="polite">ยินดีต้อนรับสู่โปรไฟล์ของฉัน</p>
         </section>
 
-        <button id="greetingBtn" type="button">ทักทาย</button>
-        <p id="greetingMessage">ยินดีต้อนรับสู่โปรไฟล์ของฉัน</p>
+        <section class="content-section" id="skills">
+            <h2>ทักษะ</h2>
+            <div class="skill-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </section>
+
+        <section class="content-section" id="portfolio">
+            <h2>ผลงาน</h2>
+            <article class="portfolio-item">
+                <h3>เว็บไซต์ My Profile</h3>
+                <p>เว็บไซต์แนะนำข้อมูลส่วนตัว จัดทำด้วย HTML และ CSS</p>
+            </article>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <p>My Profile</p>
+        <p>สร้างด้วย HTML และ CSS</p>
+    </footer>
 </body>
 </html>
